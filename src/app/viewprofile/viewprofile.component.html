@@ -1,0 +1,39 @@
+<div class="container">
+  <h1 class="a">---Profile----</h1>
+</div>
+<table border=1>
+<div class="container">
+  <div class="form-group"><b>Email_id</b>
+  <input disabled type="text" class="text" [(ngModel)]="user_id">
+  </div>
+  <br>
+<div class="form-group"><b>Password</b>
+    <input disabled type="password" style="margin-left: 48px;" class="text" [(ngModel)]="password">
+  </div>
+  <br>
+  <div class="form-group"><b>User_Name</b>
+    <input disabled type="text" class="text" style="margin-left: 33px;" [(ngModel)]="name">
+  </div>
+  <br>
+  <div class="form-group"><b>Age</b>
+    <input disabled type="text" class="text" style="margin-left: 33px;" [(ngModel)]="age">
+  </div>
+  <br>
+  <div class="form-group"><b>Mobile No.</b>
+      <input disabled type="text" style="margin-left: 35px;" class="text" [(ngModel)]="mob_no">
+  </div>
+  <br>
+  <div class="form-group"><b>City</b>
+      <input disabled type="text" style="margin-left: 81px;" class="text" [(ngModel)]="city">
+    </div>
+<br>
+<div class="form-group"><b>Address</b>
+    <input disabled type="text" class="text" [(ngModel)]="address" style="margin-left: 56px;">
+  </div>
+  <br>
+<div class="form-group">
+  <button (click)="onEdit()" style="width: 207px;margin-left: -4px;color:blue" class="text">Edit</button>
+  <button (click)="onchangepass()" class="text" style="margin-left: 5px;color:red">Change Password</button>
+</div>    
+</div>
+</table>

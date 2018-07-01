@@ -1,0 +1,48 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <div  class="col-md-4">
+          <ul  class="list-group">
+            
+            <li  class="list-group-item">
+              <span class="badge"></span>
+              <h4><a (click)="onall()">All</a></h4> 
+            </li>
+             <li class="list-group-item">
+              <span class="badge"></span>
+             <h4><a (click)="onlaptop()">Laptop</a></h4>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="badge"></span>
+               <h4><a (click)="onmobile()">Mobile</a></h4>
+              </li>
+          </ul>
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            
+            <div (click)="onclickdiv()" *ngFor="let item of prodarr"  class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img src="{{item.img}}" alt="..." height="200px" width="200px" >
+                <div class="caption">
+                  <h3>{{item.name}}</h3>
+                  <p>{{item.price}}</p>
+                  <p>{{item.soh}}</p>
+                  <p>
+                      <a (click)="ondetails(item)" class="btn btn-primary" role="button">Details</a> &nbsp;
+                      
+                  </p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <nav class="navbar navbar-inverse">
+          
+        </nav>
+      </div>
+    </div>

@@ -1,0 +1,46 @@
+<div (click)="ondetails(item)" *ngFor="let item of arr1" class="col-sm-12 col-md-12">
+  <div class="thumbnail">
+    <img src={{item.img}} alt="..." height="200px" width="200px" >
+    <table>
+    <div class="caption newdiv">
+      <h3>{{item.name}}</h3>
+      <p><b>Price:-</b>{{item.price}}</p>
+      <p><b>Color:-</b>{{item.color}}</p>
+      <p><b>Manufacturer:-</b>{{item.mfg}}</p>
+      <p><b>Total Quantity:-</b>{{item.soh}}</p>
+      <div class="form-group"><b>Qty</b>
+        <input  type="number" style="margin-left: 81px;" class="text" [(ngModel)]="qty">
+      </div>
+  
+      
+      <p>
+          <a (click)="ondetails(item)" class="btn btn-primary" role="button">Details</a>&nbsp;
+          <a (click)="onorder(item)" class="btn btn-primary" role="button">AddtoCart</a> 
+          
+      </p>
+      
+    </div>
+    </table>
+    
+  </div>
+  <hr>
+  <h3>Similar Products</h3>
+  <div (click)="ondetails(item)" *ngFor="let item of arr2" class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src={{item.img}} alt="..." height="100px" width="100px" >
+      <div class="caption newdiv">
+        <h3>{{item.name}}</h3>
+        <p><b>Price:-</b>{{item.price}}</p>
+        <p><b>Manufacturer:-</b>{{item.mfg}}</p>
+       
+  
+        <p>
+            <a (click)="ondetails(item)" class="btn btn-primary" role="button">Details</a> 
+        </p>
+        
+      </div>
+  
+      
+    </div>
+    
+</div>
